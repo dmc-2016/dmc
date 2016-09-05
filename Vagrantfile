@@ -8,10 +8,10 @@ Vagrant.configure('2') do |config|
   config.vm.network :forwarded_port, guest: 8888, host: 8888
 
   config.vm.provider "virtualbox" do |v|
-    v.memory = 1024
+    v.memory = 2048
     v.cpus = 4
   end
   
-  # config.vm.provision :shell, path: 'bootstrap.sh', keep_color: true
+  config.vm.provision :shell, path: 'bootstrap.sh', keep_color: true
   config.vm.synced_folder "notebooks/", "/home/vagrant/notebooks"
 end
