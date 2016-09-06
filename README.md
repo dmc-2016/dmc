@@ -121,23 +121,27 @@ Once the process is complete, you will see a local copy of all the files from th
 
 Once you have a local copy of the dmc repository cloned to your computer, we will do the rest of the setup directly in code using the command line. 
 
-You will follow these steps every time you want to work with the environment. Each time you boot up it will check to make sure the VM is properly set up. Since this is our first time booting up, it will first install the new VM, and then provision it with all the software we will use in class. It will download all of the software automatically, so make sure you are connected to the internet. Depending on the speed of your connection, the initial setup and installation might take some time, so be patient, and whatever you do do not close the Command Prompt or Terminal window during installation.
+You will follow these steps every time you want to work with the environment. Each time you boot up the VM it will check to make sure the VM is properly set up. Since this is our first time booting up, it will first install the new VM, and then provision it with all the software we will use in class. It will download all of the software automatically, so make sure you are connected to the internet. Depending on the speed of your connection, the initial setup and installation might take some time, so be patient, and whatever you do, do not close the command line window during installation.
 
 To access the command line, open the Command Prompt if you are on Windows, or Terminal if you are on MacOSX, and navigate to the local folder where you cloned the repo by typing the following command:
 
-    $ cd Documents/GitHub/dmc
+    cd Documents/GitHub/dmc
 
-only replace the path depending on where you cloned the repo. From this directory, let's start your VM by typing in your terminal:
+but change the path depending on where you cloned the repo. To execute the command, type it in exactly as above and hit `Enter`. Now that we are in the proper directory, let's start the VM by typing in the command window:
 
-    $ vagrant up
+    vagrant up
+
+This will go through the initialization procedure and start up the VM. If this is the first time you are booting up, it will create a new VM in VirtualBox according to instructions in the `Vagrantfile` file, and then install all the software according to the instructions in the `bootstrap.sh` file. This can take some time, so wait until all the installation steps are complete:
+
+![setup](images/setup01.png)
 
 Once the setup is complete, just run:
 
-    $ vagrant ssh
+    vagrant ssh
 
 This will give you remote access into your VM, so that all the commands you type will be executed on the new Linux machine. You can now work on this machine through the command line, but this might be difficult if you've never worked with a computer this way. Luckily, most of our work will be done through the Jupyter interactive coding interface which has a much friendlier user interface. All we have to do to launch the Jupyter interface is to execute the following command in the same Command Prompt or Terminal window:
 
-    $ bash /vagrant/notebooks/launch.sh
+    bash /vagrant/notebooks/launch.sh
 
 This will run a script that will launch the Jupyter server and forward it to your local computer. It will also share the 'notebooks' folder between the VM and your local machine, so that you can work with files directly on your local system. To see the notebooks, open a browser on your local machine, and browse to [http://127.0.0.1:8888](http://127.0.0.1:8888) or [localhost:8888](localhost:8888).
 
@@ -157,11 +161,11 @@ When you are done working on the VM, go back to the Command Prompt or Terminal w
 
 Now, the next time you want to work on the VM, just follow the launching instructions again, starting with the command
 
-    $ vagrant up
+    vagrant up
 
 If you wish to completely erase your VM and start from scratch, you can also use the command
 
-    $ vagrant destroy
+    vagrant destroy
 
 which will completely erase the VM and all of it's files. This might be necessary if something goes wrong with the installation or you have problems importing any of the libraries. Although this will erase all local files stored on the VM, your notebooks and any changes you made should remain since that folder is synced to your local machine.
 
