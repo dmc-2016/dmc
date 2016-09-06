@@ -133,15 +133,27 @@ but change the path depending on where you cloned the repo. To execute the comma
 
 This will go through the initialization procedure and start up the VM. If this is the first time you are booting up, it will create a new VM in VirtualBox according to instructions in the `Vagrantfile` file, and then install all the software according to the instructions in the `bootstrap.sh` file. This can take some time, so wait until all the installation steps are complete before proceeding.
 
+-
+
 ![setup](images/setup01.png)
 
-Once the setup is done you should have a new VM set up through VirtualBox which is provisioned with all the software we will use in class. To check that the VM was installed, you can open up the VirtualBox software. You should see your VM there with the status `Running`
+-
+
+Once the setup is done you should have a new VM set up through VirtualBox which is provisioned with all the software we will use in class. To check that the VM was installed, open up the VirtualBox software. You should now see your VM listed with the status `Running`
+
+-
 
 ![setup](images/setup05.png)
 
+-
+
 Now go back to your command line and type in:
 
+-
+
     vagrant ssh
+
+-
 
 ![setup](images/setup06.png)
 
