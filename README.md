@@ -1,6 +1,6 @@
-# Deep Learning	Vagrant	Machine
+# DMC 2016 Virtual Machine
 
-These Vagrant files automates the installation of a working Deep Learning machine running on Ubuntu 14.04.
+This Vagrant setup automates the installation of a full machine learning software stack running on Ubuntu 14.04.
 
 What's in the box:
 * [Keras](http://keras.io/) - minimalist, highly modular neural networks library.
