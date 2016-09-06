@@ -85,11 +85,15 @@ First, go to https://github.com/ and sign up for a free account:
  
 When you are logged in, fork this repository to create your own copy on your account. At the top right corner of this page, click the button that says 'Fork'.
 
+-
+
 ![GitHub account](images/github02.png)
 
 -
 
 You should now see this repository under your account, as a fork of the main repository from dmc-2016.
+
+-
 
 ![GitHub account](images/github03.png)
 
@@ -98,6 +102,8 @@ You should now see this repository under your account, as a fork of the main rep
 Now, let's download and install the Github client, so you can clone the repository to your local computer and access the files locally. Go here: [https://desktop.github.com/](https://desktop.github.com/) to download the client and follow the instructions to install it. I will use the windows version, but it works in a similar way for both Mac and Linux.
 
 Once you have the client installed, you should see a blank interface. Click the plus sign in the upper left corner, and go to Clone. This should produce a list of any projects you have started or forked. CLick on your fork of 'dmc', and click the check mark to clone this repository to your local computer. It will ask you where you want to clone the repository into. Select a folder such as 'My Documents/GitHub'. 
+
+-
 
 ![GitHub account](images/github04.png)
 
