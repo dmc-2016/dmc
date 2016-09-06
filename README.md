@@ -205,15 +205,17 @@ This will completely erase the VM and all of its files. This might be necessary 
 
 # Syncing your work and submitting assignments
 
-Once you are done working with the notebooks, you should sync your changes back to Github. This will create a backup of your works and allow you to see your work on the Github site. Most importantly, this will be the method for turning in your lab work each week. In general, each week during Session A will have a programming lab assignment contained in one or more notebooks in the appropriate folder. To complete the lab you should go through the notebook(s), execute the code, and add any additional code requested. Once you are done with the lab, you will 
+Once you are done working with the notebooks, you should sync your changes back to Github. This will create a backup of your work and allow you to see your work on the Github site. Most importantly, this will be the method for turning in your lab work each week. In general, each week during Session A will have a programming lab assignment contained in one or more notebooks in that week's folder. To complete the lab you will go through the notebook(s), execute the code, and add any additional code required. Once you are done with the lab, you will:
 
-1. save the notebook
-2. sync the changes to your Github account
-3. submit a pull request back to the main repository (dmc-2016/dmc), asking to merge all code. This pull request will serve as you 'handing in' the assignment, which will allow me to track everyone's work. Once I receive the pull request I will review your code, and possibly make comments and ask for revisions within the pull request comments section.
+1. save the notebook(s)
+2. sync the changes with your Github account
+3. submit a **pull request** back to the main repository (dmc-2016/dmc), asking to merge all code. This pull request will serve as you 'handing in' the assignment, which will allow me to track everyone's work. Once I receive the pull request I will review your code, and possibly make comments and ask for revisions within the pull request comments section.
 
-Let's test this workflow by syncing the changes we made to the week-1 notebook, and submit a pull request.
+Let's test this workflow by syncing the changes we just made to the week-1 notebook, and submit our first pull request.
 
-Whenever you make changes to any file within the repository folder, Github will register the change, and will track it in the Github Desktop program. You can review the changes made to each file by clicking them on the left pane. It will then show you which lines were deleted (in red) and added (in green) since the last commmit. To commit these changes to the repository, type in a short description of the changes you made, and hit the checkmark next to 'Commit to master'. To sync this commit to the online repository, hit the 'Sync' button in the top right corner. Anytime you want to make changes, make sure you both submit a commit **AND** sync to the server, or else no one else will be able to see your local changes.
+Whenever you make changes to any file within the repository folder, Github will register the change, and will track it in the Github Desktop program. To see the changes, make sure you have the correct repository selected in the left pane, and that the `Changes` button is selected on the top bar. If there are any changes in the repository this button will have a circle next to it.
+
+Now, any files with changes since the last commit will be listed in the left pane. You can review these changes by clicking on each file name, which will display the changes on the right. If it is a text-based file (as the notebooks are), it will show you which lines were deleted (in red) and added (in green) since the last commmit. To commit these changes to the repository, type in a short description of the changes you made, and hit the checkmark next to 'Commit to master'. To sync this commit to the online repository, hit the 'Sync' button in the top right corner. Anytime you want to make changes, make sure you both submit a commit **AND** sync to the server, or else no one else will be able to see your local changes.
 
 -
 
@@ -229,9 +231,9 @@ Once the changes are synced, you can go back to the Github website and see that 
 
 -
 
-After you've made all the changes you want, you are now ready to submit your edits as a pull request to the master project. To start, click the text that says 'Pull request' (see image above). This will present you with an interface that lets you specify the source and target of the pull, as well as review the changes that have been made. On the top bar, the base fork should be the base project (`data-mining-the-city/getting-started`) and the head fork should be your fork (`<user>/getting-started`). In this case, since the changes are minor and are not in conflict with any changes made in the main project, it is able to merge the changes directly without any additional negotiations. 
+After you've made all the changes you want, you are ready to submit your edits as a pull request to the master project. To start, click the text that says `New pull request` (see image above). This will present you with an interface that lets you specify the source and target of the pull, as well as review the changes that have been made. On the top bar, the base fork should be the base project (`dmc-2016/dmc`) and the head fork should be your fork (`<user>/dmc`). In this case, since the changes are minor and are not in conflict with any changes made in the main project, it is able to merge the changes directly without any additional negotiations. 
 
-Once you are satisfied, hit the green 'Create pull request' button to submit the request. You will have to write a short message describing all the changes you have made since forking the project. Make sure to write down any information the main project owners might need to know while considering your request. This will be the same method you use to turn in your lab work each week, so make sure to also include any feedback, as well as describe any issues or difficulties you had.
+Once you are satisfied, hit the green `Create pull request` button to submit the request. You will have to write a short message describing all the changes you have made since forking the project. Make sure to write down any information the main project owners might need to know while considering your request. This will be the same method you use to turn in your lab work each week, so make sure to also include any feedback, as well as describe any issues or difficulties you had.
 
 -
 
@@ -243,7 +245,7 @@ After the pull request has been made, you will be notified by email about the st
 
 # Pulling in changes from the main repository
 
-I will continue to develop the lab assignments throughout the course of the semester, and might make changes depending on the pace of the class. Therefore, it is very important that before you start on any assignment you pull in any changes from the main project into your fork. Unfortunately this is not possible through the Github Desktop GUI, but can be easily done with a few lines in the Git Shell, which allows you to enter git commands directly. 
+The lab assignments may be edited and developed during the course of the semester. Therefore, it is very important that before you begin any assignment you first pull in any changes from the main project into your fork. Unfortunately this is not possible through the Github Desktop interface, but can be easily done with a few lines in the Git Shell, which allows you to enter git commands directly. 
 
 First, make sure there are not any uncommited changes in your repo (the left pane says 'No changes'). Next, open the Git Shell by clicking the setup icon in the top right corner, and select `Open in Git Shell`.
 
