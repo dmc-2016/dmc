@@ -131,17 +131,25 @@ but change the path depending on where you cloned the repo. To execute the comma
 
     vagrant up
 
-This will go through the initialization procedure and start up the VM. If this is the first time you are booting up, it will create a new VM in VirtualBox according to instructions in the `Vagrantfile` file, and then install all the software according to the instructions in the `bootstrap.sh` file. This can take some time, so wait until all the installation steps are complete:
+This will go through the initialization procedure and start up the VM. If this is the first time you are booting up, it will create a new VM in VirtualBox according to instructions in the `Vagrantfile` file, and then install all the software according to the instructions in the `bootstrap.sh` file. This can take some time, so wait until all the installation steps are complete before proceeding.
 
 ![setup](images/setup01.png)
 
-Once the setup is complete, just run:
+Once the setup is done you should have a new VM set up through VirtualBox which is provisioned with all the software we will use in class. To check that the VM was installed, you can open up the VirtualBox software. You should see your VM there with the status `Running`
+
+![setup](images/setup02.png)
+
+Now go back to your command line and type in:
 
     vagrant ssh
 
-This will give you remote access into your VM, so that all the commands you type will be executed on the new Linux machine. You can now work on this machine through the command line, but this might be difficult if you've never worked with a computer this way. Luckily, most of our work will be done through the Jupyter interactive coding interface which has a much friendlier user interface. All we have to do to launch the Jupyter interface is to execute the following command in the same Command Prompt or Terminal window:
+![setup](images/setup03.png)
+
+This will use SSH to give you remote access into your VM, so that all the commands you type will be executed on the new Linux machine. You can now work on this machine through the command line, but this might be difficult if you've never worked with a computer this way. Luckily, most of our work will be done through the Jupyter interactive coding interface which has a much friendlier user interface. All we have to do to launch the Jupyter interface is to execute the following command in the same command line window:
 
     bash /vagrant/notebooks/launch.sh
+
+![setup](images/setup04.png)
 
 This will run a script that will launch the Jupyter server and forward it to your local computer. It will also share the 'notebooks' folder between the VM and your local machine, so that you can work with files directly on your local system. To see the notebooks, open a browser on your local machine, and browse to [http://127.0.0.1:8888](http://127.0.0.1:8888) or [localhost:8888](localhost:8888).
 
