@@ -149,27 +149,39 @@ Once the setup is done you should have a new VM set up through VirtualBox which 
 
 Now go back to your command line and type in:
 
--
-
     vagrant ssh
 
 -
 
 ![setup](images/setup06.png)
 
+-
+
 This will use SSH to give you remote access into your VM, so that all the commands you type will be executed on the new Linux machine. You can now work on this machine through the command line, but this might be difficult if you've never worked with a computer this way. Luckily, most of our work will be done through the Jupyter interactive coding interface which has a much friendlier user interface. All we have to do to launch the Jupyter interface is to execute the following command in the same command line window:
 
     bash /vagrant/notebooks/launch.sh
 
+-
+
 ![setup](images/setup08.png)
+
+-
 
 This will run a script that will launch the Jupyter server and forward it to your local computer. It will also share the 'notebooks' folder between the VM and your local machine, so that you can work with files directly on your local system. To see the notebooks, open a browser on your local machine, and browse to [http://127.0.0.1:8888](http://127.0.0.1:8888) or [localhost:8888](localhost:8888).
 
+-
+
 ![Jupyter](images/jupyter01.png)
+
+-
 
 You should now see a folder structure which shows you all the files on your VM, including the notebooks folder which is synced back to your local machine. To test your setup, click on the 'notebooks' folder, and then the 'week-1' folder. Now open the notebook called 'week 1 - VM test.ipynb'.
 
+-
+
 ![Jupyter](images/jupyter02.png)
+
+-
 
 In the top menu, click on `Cell -> Run` All to make sure all the cells run without any errors. In the last cell, change the code to print out your uni and rerun the cell (you can hit Ctrl+Enter to run an individual cell). Once everything is working, you should save go to `File -> Save and Checkpoint` to save your changes and `File -> Close and Halt` to close the notebook.
 
@@ -201,11 +213,15 @@ Let's test this workflow by syncing the changes we made to the week-1 notebook, 
 
 Whenever you make changes to any file within the repository folder, Github will register the change, and will track it in the Github Desktop program. You can review the changes made to each file by clicking them on the left pane. It will then show you which lines were deleted (in red) and added (in green) since the last commmit. To commit these changes to the repository, type in a short description of the changes you made, and hit the checkmark next to 'Commit to master'. To sync this commit to the online repository, hit the 'Sync' button in the top right corner. Anytime you want to make changes, make sure you both submit a commit **AND** sync to the server, or else no one else will be able to see your local changes.
 
+-
+
 ![GitHub account](images/github08.png)
 
 -
 
 Once the changes are synced, you can go back to the Github website and see that the changes are now reflected in your fork, with the commit description written next to the changed file. 
+
+-
 
 ![GitHub account](images/github09.png)
 
@@ -214,6 +230,8 @@ Once the changes are synced, you can go back to the Github website and see that 
 After you've made all the changes you want, you are now ready to submit your edits as a pull request to the master project. To start, click the text that says 'Pull request' (see image above). This will present you with an interface that lets you specify the source and target of the pull, as well as review the changes that have been made. On the top bar, the base fork should be the base project (`data-mining-the-city/getting-started`) and the head fork should be your fork (`<user>/getting-started`). In this case, since the changes are minor and are not in conflict with any changes made in the main project, it is able to merge the changes directly without any additional negotiations. 
 
 Once you are satisfied, hit the green 'Create pull request' button to submit the request. You will have to write a short message describing all the changes you have made since forking the project. Make sure to write down any information the main project owners might need to know while considering your request. This will be the same method you use to turn in your lab work each week, so make sure to also include any feedback, as well as describe any issues or difficulties you had.
+
+-
 
 ![GitHub account](images/github10.png)
 
@@ -227,7 +245,11 @@ I will continue to develop the lab assignments throughout the course of the seme
 
 First, make sure there are not any uncommited changes in your repo (the left pane says 'No changes'). Next, open the Git Shell by clicking the setup icon in the top right corner, and select `Open in Git Shell`.
 
+-
+
 ![GitHub account](images/github06.png)
+
+-
 
 Now, type in the following commands to set the remote master repository, and pull in changes to your local fork:
 
@@ -242,6 +264,8 @@ This commands pulls in changes from the original repo not present in your local 
     git merge upstream/master
 
 This commands merges fetched changes into your working files.
+
+-
 
 ![GitHub account](images/github07.png)
 
