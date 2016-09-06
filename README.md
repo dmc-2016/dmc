@@ -167,7 +167,7 @@ This will use SSH to give you remote access into your VM, so that all the comman
 
 -
 
-This will run a script that will launch the Jupyter server and forward it to your local computer. It will also share the 'notebooks' folder between the VM and your local machine, so that you can work with files directly on your local system. To see the notebooks, open a browser on your local machine, and browse to [http://127.0.0.1:8888](http://127.0.0.1:8888) or [localhost:8888](localhost:8888).
+This will run a script that will launch the Jupyter server and forward it to your local computer. It will also share the 'notebooks' folder between the VM and your local machine, so that you can work with files directly on your local system. To see the notebooks, open a browser on your local machine, and browse to [http://127.0.0.1:8888](http://127.0.0.1:8888) or [localhost:8888](http://localhost:8888).
 
 -
 
@@ -183,7 +183,7 @@ You should now see a folder structure which shows you all the files on your VM, 
 
 -
 
-In the top menu, click on `Cell -> Run` All to make sure all the cells run without any errors. In the last cell, change the code to print out your uni and rerun the cell (you can hit Ctrl+Enter to run an individual cell). Once everything is working, you should save go to `File -> Save and Checkpoint` to save your changes and `File -> Close and Halt` to close the notebook.
+In the top menu, click on `Cell → Run All` to make sure all the cells run without any errors. In the last cell, change the code to print out your uni and rerun the cell (you can hit `Ctrl+Enter` to run an individual cell). Once everything is working, go to `File → Save and Checkpoint` to save your changes and `File → Close and Halt` to close the notebook.
 
 When you are done working on the VM, go back to the Command Prompt or Terminal window from which you launched it. Then execute the following process to shut down the VM:
 
