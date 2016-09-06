@@ -203,9 +203,9 @@ If you wish to completely erase your VM and start from scratch, you can also use
 
 This will completely erase the VM and all of its files. This might be necessary if something goes wrong with the installation or you have problems importing any of the libraries. Although this will erase all local files stored on the VM, your notebooks and any changes you made should remain since that folder is synced to your local machine.
 
-# Syncing your work and submitting assignments through Github
+# Syncing your work and submitting assignments
 
-Once you are done working with the notebooks, you can sync your changes back to Github. This will create a backup of your works and allow you to see your work on the Github site. Most importantly, this will be the method for turning in your lab work each week. In general, each week during Session A will have a programming lab assignment contained in one or more notebooks in the appropriate folder. To complete the lab you should go through the notebook(s), execute the code, and add any additional code requested. Once you are done with the lab, you will 
+Once you are done working with the notebooks, you should sync your changes back to Github. This will create a backup of your works and allow you to see your work on the Github site. Most importantly, this will be the method for turning in your lab work each week. In general, each week during Session A will have a programming lab assignment contained in one or more notebooks in the appropriate folder. To complete the lab you should go through the notebook(s), execute the code, and add any additional code requested. Once you are done with the lab, you will 
 
 1. save the notebook
 2. sync the changes to your Github account
@@ -241,7 +241,7 @@ Once you are satisfied, hit the green 'Create pull request' button to submit the
 
 After the pull request has been made, you will be notified by email about the status of the request, as well as any comments that are made in the comments section. I will use the pull requests to track and grade the assignments, and will use the comments section to leave you feedback and request any changes.
 
-### Pulling in changes from the main repository
+# Pulling in changes from the main repository
 
 I will continue to develop the lab assignments throughout the course of the semester, and might make changes depending on the pace of the class. Therefore, it is very important that before you start on any assignment you pull in any changes from the main project into your fork. Unfortunately this is not possible through the Github Desktop GUI, but can be easily done with a few lines in the Git Shell, which allows you to enter git commands directly. 
 
