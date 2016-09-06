@@ -13,7 +13,7 @@ What's included:
 
 # What is this for?
 
-Going through the following process will set up a virtual Linux environment on your computer, and use Vagrant to automatically set it up with all the tools we will use in class. The goal of this process is to create an easily reproduceable programming environment which gives everyone in the class the exact same setup regardless of what computer they are using.
+Going through the following process will set up a virtual Linux environment on your computer, and use Vagrant to automatically provision it with all the tools we will use in class. The goal of this process is to create an easily reproduceable programming environment which gives everyone in the class the exact same setup regardless of what computer they are using.
 
 This is preferrable for several reasons:
 
