@@ -89,48 +89,87 @@ You should now see this repository under your account, as a fork of the main rep
 
 Now, let's download and install the Github client, so you can clone the repository to your local computer and access the files locally. Go here: [https://desktop.github.com/](https://desktop.github.com/) to download the client and follow the instructions to install it. I will use the windows version, but it works in a similar way for both Mac and Linux.
 
-Once you have the client installed, you should see a blank interface. Click the plus sign in the upper left corner, and go to Clone. This should produce a list of any projects you have started or forked. CLick on your fork of 'getting-started', and click the check mark to clone this repository to your local computer. It will ask you where you want to clone the repository into. Select a folder such as 'My Documents/GitHub'. 
+Once you have the client installed, you should see a blank interface. Click the plus sign in the upper left corner, and go to Clone. This should produce a list of any projects you have started or forked. CLick on your fork of 'dmc', and click the check mark to clone this repository to your local computer. It will ask you where you want to clone the repository into. Select a folder such as 'My Documents/GitHub'. 
 
 ![GitHub account](images/github04.png)
 
 Once the process is complete, you will see a local copy of all the files from the repository in the specified folder and a blank interface telling you that you have not made any local changes. 
 
-![GitHub account](images/github05.png)
+![GitHub account](images/github04.png)
 
 ### Setting up the VM
 
-Once Vagrant and VirtualBox are installed, clone this repository or import `Vagrantfile` and `bootstrap.sh` in a directory.
+Once you have a local copy of the dmc repository cloned to your computer, we will do the rest of the setup directly in code using the command line. 
 
-From this directory, let's start your Vagrant box by typing in your terminal (it might take some time to download the Ubuntu image):
+You will follow these steps every time you want to work with the environment. Each time you boot up it will check to make sure the VM is properly set up. Since this is our first time booting up, it will first install the new VM, and then provision it with all the software we will use in class. It will download all of the software automatically, so make sure you are connected to the internet. Depending on the speed of your connection, the initial setup and installation might take some time, so be patient, and whatever you do do not close the Command Prompt or Terminal window during installation.
+
+To access the command line, open the Command Prompt if you are on Windows, or Terminal if you are on MacOSX, and navigate to the local folder where you cloned the repo by typing the following command:
+
+    $ cd Documents/GitHub/dmc
+
+only replace the path depending on where you cloned the repo. From this directory, let's start your VM by typing in your terminal:
 
     $ vagrant up
+
 Once the setup is complete, just run:
-    
+
     $ vagrant ssh
-You are in! Now, let's train your first recurrent neuronal network:
 
-    $ python keras/examples/addition_rnn.py
+This will give you remote access into your VM, so that all the commands you type will be executed on the new Linux machine. You can now work on this machine through the command line, but this might be difficult if you've never worked with a computer this way. Luckily, most of our work will be done through the Jupyter interactive coding interface which has a much friendlier user interface. All we have to do to launch the Jupyter interface is to execute the following command in the same Command Prompt or Terminal window:
 
-If you can see that, it means that you setup is working and that you are training your recurrent neuronnal network to perform addition!
-![addition_rnn-screenshot](http://i.imgur.com/u06tE6B.png)
+    $ bash /vagrant/notebooks/launch.sh
 
-To go through the code step by step, type:
+This will run a script that will launch the Jupyter server and forward it to your local computer. It will also share the 'notebooks' folder between the VM and your local machine, so that you can work with files directly on your local system. To see the notebooks, open a browser on your local machine, and browse to [http://127.0.0.1:8888](http://127.0.0.1:8888) or [localhost:8888](localhost:8888).
 
-    $ jupyter notebook --no-browser --ip=0.0.0.0 --FileContentsManager.root_dir=/home/vagrant/keras/examples/
+![Jupyter](images/jupyter01.png)
 
-Open a browser and browse http://127.0.0.1:8888
+You should now see a folder structure which shows you all the files on your VM, including the notebooks folder which is synced back to your local machine. To test your setup, click on the 'notebooks' folder, and then the 'week-1' folder. Now open the notebook called 'week 1 - VM test.ipynb'.
 
-# Tips and tricks
+![Jupyter](images/jupyter02.png)
 
-To access files present on your computer from your Vagrant/Ubuntu machine, go to the `/vagrant` directory which is mounted to the directory you started you Vagrant box from:
+In the top menu, click on `Cell -> Run` All to make sure all the cells run without any errors. In the last cell, change the code to print out your uni and rerun the cell (you can hit Ctrl+Enter to run an individual cell). Once everything is working, you should save go to `File -> Save and Checkpoint` to save your changes and `File -> Close and Halt` to close the notebook.
 
-    $ cd /vagrant/
+When you are done working on the VM, go back to the Command Prompt or Terminal window from which you launched it. Then execute the following process to shut down the VM:
 
-To get a list of available vagrant commands (from your host computer), just type:
+1. Ctrl+C twice to exit out of notebook server
+2. Ctrl+D to exit out of SSH remote access
+3. execute the command `vagrant halt` to shut down the VM. This will shut down the machine, but keep all the files so you can work on them at a later time.
 
-    $ vagrant
+Now, the next time you want to work on the VM, just follow the launching instructions again, starting with the command
 
-If you want to start your virtual machine from scratch, disconnect from it and from your host computer run:
+    $ vagrant up
+
+If you wish to completely erase your VM and start from scratch, you can also use the command
 
     $ vagrant destroy
-    $ vagrant up
+
+which will completely erase the VM and all of it's files. This might be necessary if something goes wrong with the installation or you have problems importing any of the libraries. Although this will erase all local files stored on the VM, your notebooks and any changes you made should remain since that folder is synced to your local machine.
+
+### Syncing your work and submitting assignments through Github
+
+
+
+1. Each week, fork the repository for that week into your own account. You can fork all the repositories at once, or do it before starting each week's labs. Be aware that there might be changes made to later weeks, so make sure to sync all changes from the main project before starting the lab.
+2. Clone your fork of the repository onto your local desktop.
+3. Work on the code locally as you complete the labs. Feel free to make commits to your fork as you work to keep track of your changes as you see fit. I recommend coming up with your own committing system to keep track of major changes, but this will not effect your completion of the assigment. Keep in mind that in some weeks, branches will be used to develop different version of the code for different steps of the tutorial. Make sure you switch to the right branch before starting the relevant tutorial.
+4. Once you have finished the week's lab, submit a pull request back to the main project (data-mining-the-city), asking to merge all code. I will then review your code, and possibly make comments and ask for revisions within the pull request comments section.
+
+Go to the repo's directory and find the README.md file in the main folder. Open the file in any text editor (I recommend downloading [Sublime](http://www.sublimetext.com/), which is a great free text editor with many useful features such as syntax highlighting). Make some change to the file and save it. 
+
+![GitHub account](/dmc/images/github06.png)
+
+As soon as you hit save, Github will register the change, and will track it in the Github client. You can review the changes made to each file by clicking them on the left pane. It will then show you which lines were deleted (in red) and added (in green) since the last commmit. To commit these changes to the repository, type in a short description of the changes you made, and hit the checkmark next to 'Commit to master'. To sync this commit to the online repository, hit the 'Sync' button in the top right corner. Anytime you want to make changes, make sure you both submit a commit **AND** sync to the server, or else no one else will be able to see your local changes.
+
+![GitHub account](/dmc/images/github07.png)
+
+Once the changes are synced, you can go back to the Github website and see that the changes are now reflected in your fork, with the commit description written next to the changed file. 
+
+![GitHub account](/dmc/images/github08.png)
+
+After you've made all the changes you want, you are now ready to submit your edits as a pull request to the master project. To start, click the text that says 'Pull request' (see image above). This will present you with an interface that lets you specify the source and target of the pull, as well as review the changes that have been made. On the top bar, the base fork should be the base project (`data-mining-the-city/getting-started`) and the head fork should be your fork (`<user>/getting-started`). In this case, since the changes are minor and are not in conflict with any changes made in the main project, it is able to merge the changes directly without any additional negotiations. 
+
+Once you are satisfied, hit the green 'Create pull request' button to submit the request. You will have to write a short message describing all the changes you have made since forking the project. Make sure to write down any information the main project owners might need to know while considering your request. This will be the same method you use to turn in your lab work each week, so make sure to also include any feedback, as well as describe any issues or difficulties you had.
+
+![GitHub account](/dmc/images/github09.png)
+
+After the pull request has been made, you will be notified by email about the status of the request, as well as any comments that are made in the comments section. I will use the pull requests to track and grade the assignments, and will use the comments section to leave you feedback and request any changes.
