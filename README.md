@@ -13,9 +13,9 @@ What's included:
 
 # What is this for?
 
-Going through the following process will set up a virtual Linux environment on your computer, and use Vagrant to automatically provision it with all the tools we will use in class. The goal of this process is to create an easily reproduceable programming environment which gives everyone in the class the exact same setup regardless of what computer they are using.
+Going through the following process will set up a virtual Linux environment on your computer, and use Vagrant to automatically provision it with all the tools we will use in class. The goal of this process is to create an easily reproducible programming environment which gives everyone in the class the exact same setup regardless of what computer they are using.
 
-This is preferrable for several reasons:
+This is preferable for several reasons:
 
 * In this class, we will not be using traditional software packages which can be easily installed for different operating systems (OS). Most of our work will be based in Python, which is a lower-level programming language which has different installation procedures and might function differently under different OS. We will also rely on a number of different libraries and packages that run on top of Python. Each of these packages also has a different installation process that varies by OS. Some have a number of dependencies and some have to be built from source code, which can be a very challenging and frustrating process, depending on your experience with computer programming and the machine you are working on.  By automating the installation process this setup takes most of the difficulty out of this setup.
 
@@ -29,7 +29,7 @@ There are, however, some limitations:
 * The VM cannot support GPU for accelerated computing, even if you have one installed in your machine.
 * The VM is provisioned with limited RAM and hard disk memory, so might not be able to handle larger ML tasks.
 
-For these reasons, you may eventually consider a native solution working directly within OSX or Windows, or even create a separate partition on your machine to work directly in Linux. This might be beneficial or even necessary as you start to work on bigger problems for your research project. However, you should start wtih this setup first, at least until you get familiar with the example problems and all the different packages. Also, given the number of people in the class, *any custom setup will be done with your own effort and at your own risk, and I will not be able to troubleshoot any individual installation issues, apart from what is covered here*.
+For these reasons, you may eventually consider a native solution working directly within OSX or Windows, or even create a separate partition on your machine to work directly in Linux. This might be beneficial or even necessary as you start to work on bigger problems for your research project. However, you should start with this setup first, at least until you get familiar with the example problems and all the different packages. Also, given the number of people in the class, *any custom setup will be done with your own effort and at your own risk, and I will not be able to troubleshoot any individual installation issues, apart from what is covered here*.
 
 With that out of the way, let's begin...
 
@@ -61,15 +61,15 @@ Github will allow us to keep track of our code as we develop the lab assignments
 
 Note: Github is based on the [Git](https://git-scm.com/) version control system, which is used completely through the command line (by typing text commands rather than clicking buttons on a graphic user interface). However, Github also provides a standalone [desktop client](https://desktop.github.com/) with a graphic user interface which can be easier to use for beginners. The client has most of the features you will need to complete the labs, so you should not have to use the command line interface, but feel free to learn, explore, and use it if you are comfortable with it.
 
-### Forking and Branching, Push and Pulling
+### Forking and branching, pushing and pulling
 
-To structure collaboration and keep track of document revisions, Github is based on a very specific [workflow](https://guides.github.com/introduction/flow/). Each project is contained within its own **repository**, which you can think of as a folder on your desktop. This repository exists on Github's servers, but you can also **clone** the repository to your desktop, where it will live inside a specified folder (usually called Git or Github within your `Documents` folder). The Github software will then take care of syncing your local folder to the contents of the repository.
+To structure collaboration and keep track of document revisions, Github is based on a very specific [workflow](https://guides.github.com/introduction/flow/). Each project is contained within its own **repository**, which you can think of as a folder on your desktop. This repository exists on Github's servers, but you can also **clone** the repository to your desktop, where it will live inside a specified folder (usually called `Git` or `Github` within your `Documents` folder). The Github software will then take care of syncing your local folder to the contents of the repository.
 
-Each repository can contain multiple **branches** or versions of the project. When you start a project, by default all of your changes will go on the *master* branch, which is the main version of your project. At any point you can start another branch, which will replicate all your files and allow you to make changes without affecting the master branch. In software development this is used to test out ideas or features in a safe way, while the `master` branch maintains the latest stable working version of the code. At any point you can merge the contents of a branch with the master, and the Github interface will help you to look through the changes and handle any conflicts. 
+Each repository can contain multiple **branches** or versions of the project. When you start a project, by default all of your changes will go on the *master* branch, which is the main version of your project. At any point you can start another branch, which will replicate all your files and allow you to make changes without affecting the master branch. In software development this is used to test out ideas or features in a safe way, while the `master` branch maintains the latest stable working version of the code. At any point you can merge the contents of a branch with the master, and the Github interface will help you look through the changes and handle any conflicts. 
 
 When you make a change to a document locally, Github will not automatically save the changes to the repository. To update the project with your changes, you need to push a **commit** to the repository. The commit tracks every change made to every document since the last commit, and provides a clear revision history of the project. At any point, you can step through the commits to undo any changes that have been made.
 
-In addition to storing and tracking your own projects, Github provides several options for contributing to other people's projects. By default, all code on Github is open-source, meaning everyone can see the code freely. However, you cannot make changes or 'commit' to it without being granted permission by the repository's owners. Another way to contribute to a project is to **fork** the project, or create your own version of the repository under your own account. This fork will function just like the main repository, allowing you to make changes and push commits to it, but will exist separately. You are free to keep developing this fork on your own, and even spin it off as its own separate project. 
+In addition to storing and tracking your own projects, Github provides several options for contributing to other people's projects. By default, all code on Github is open-source, meaning everyone can see the code freely. However, you cannot make changes or 'commit' to it without being granted permission by the repository's owners. Another way to contribute to a project is to **fork** the project, or create your own version of the repository under your own account. This fork will function just like the main repository, allowing you to make changes and push commits to it, but will exist separately. You are free to keep developing this fork on your own, and even spin it off as its own separate project (subject to its [license](https://opensource.org/licenses)). 
 
 If at any point you want to contribute your changes to the main project, you can submit a **pull request**, which will alert the repository owners of any changes you have made, and give them the chance to either accept the pull request and merge in the code, or deny it and keep their code as it is. This fork/pull request workflow is quite common in [open-source software development](https://en.wikipedia.org/wiki/Open-source_software_development), where many people might be contributing to a project without a higher level organization structure.
 
@@ -101,7 +101,7 @@ You should now see this repository under your account, as a fork of the main rep
 
 Now, let's download and install the Github client, so you can clone the repository to your local computer and access the files locally. Go here: [https://desktop.github.com/](https://desktop.github.com/) to download the client and follow the instructions to install it. I will use the windows version, but it works in a similar way for both Mac and Linux.
 
-Once you have the client installed, you should see a blank interface. Click the plus sign in the upper left corner, and go to Clone. This should produce a list of any projects you have started or forked. CLick on your fork of 'dmc', and click the check mark to clone this repository to your local computer. It will ask you where you want to clone the repository into. Select a folder such as 'Documents/GitHub'. 
+Once you have the client installed, you should see a blank interface. Click the plus sign in the upper left corner, and go to Clone. This should produce a list of any projects you have started or forked. Click on your fork of 'dmc', and click the check mark to clone this repository to your local computer. It will ask you where you want to clone the repository into. Select a folder such as 'Documents/GitHub'. 
 
 -
 
@@ -109,7 +109,7 @@ Once you have the client installed, you should see a blank interface. Click the 
 
 -
 
-Once the process is complete, you will see a local copy of all the files from the repository in the specified folder and a blank interface telling you that you have not made any local changes. 
+Once the process is complete, you will see a local copy of all the files from the repository in the specified folder on your computer. 
 
 -
 
@@ -127,7 +127,7 @@ To access the command line, open the Command Prompt if you are on Windows, or Te
 
     cd Documents/GitHub/dmc
 
-but change the path depending on where you cloned the repo. To execute the command, type it in exactly as above and hit `Enter`. Now that we are in the proper directory, let's start the VM by typing in the command window:
+but change the path depending on where you cloned the repo. To execute the command, type it in exactly as above and hit `Enter`. Now that we are in the proper directory, let's start the VM by typing in the command:
 
     vagrant up
 
@@ -139,7 +139,7 @@ This will go through the initialization procedure and start up the VM. If this i
 
 -
 
-Once the setup is done you should have a new VM set up through VirtualBox which is provisioned with all the software we will use in class. To check that the VM was installed, open up the VirtualBox software. You should now see your VM listed with the status `Running`
+Once the setup is done you should have a new VM set up through VirtualBox which is provisioned with all the software we will use in class. To check that the VM was installed, open up the VirtualBox software. You should see your VM listed with the status `Running`
 
 -
 
@@ -147,7 +147,7 @@ Once the setup is done you should have a new VM set up through VirtualBox which 
 
 -
 
-Now go back to your command line and type in:
+Now go back to your Command Prompt or Terminal window and type in:
 
     vagrant ssh
 
@@ -175,7 +175,7 @@ This will run a script that will launch the Jupyter server and forward it to you
 
 -
 
-You should now see a folder structure which shows you all the files on your VM, including the notebooks folder which is synced back to your local machine. To test your setup, click on the 'notebooks' folder, and then the 'week-1' folder. Now open the notebook called 'week 1 - VM test.ipynb'.
+You should now see a folder structure which shows you all the files on your VM, including the notebooks folder which is synced back to your local machine. To test your setup, click on the `notebooks` folder, and then the `week-1` folder. Now open the notebook called `week 1 - VM test.ipynb`.
 
 -
 
@@ -185,11 +185,13 @@ You should now see a folder structure which shows you all the files on your VM, 
 
 In the top menu, click on `Cell → Run All` to make sure all the cells run without any errors. In the last cell, change the code to print out your uni and rerun the cell (you can hit `Ctrl+Enter` to run an individual cell). Once everything is working, go to `File → Save and Checkpoint` to save your changes and `File → Close and Halt` to close the notebook.
 
-When you are done working on the VM, go back to the Command Prompt or Terminal window from which you launched it. Then execute the following process to shut down the VM:
+### Shutting down the VM
 
-1. Ctrl+C twice to exit out of notebook server
+When you are done working on the VM, go back to the Command Prompt or Terminal window from which you launched it. Then execute the following commands to shut down the VM:
+
+1. Ctrl+C twice to exit out of the notebook server
 2. Ctrl+D to exit out of SSH remote access
-3. execute the command `vagrant halt` to shut down the VM. This will shut down the machine, but keep all the files so you can work on them at a later time.
+3. type in the command `vagrant halt` to shut down the VM. This will shut down the machine, but keep all the files so you can work on them at a later time.
 
 Now, the next time you want to work on the VM, just follow the launching instructions again, using the commands:
 
@@ -205,7 +207,7 @@ This will completely erase the VM and all of its files. This might be necessary 
 
 # Syncing your work and submitting assignments
 
-Once you are done working with the notebooks, you should sync your changes back to Github. This will create a backup of your work and allow you to see your work on the Github site. Most importantly, this will be the method for turning in your lab work each week. In general, each week during Session A will have a programming lab assignment contained in one or more notebooks in that week's folder. To complete the lab you will go through the notebook(s), execute the code, and add any additional code required. Once you are done with the lab, you will:
+Once you are done working with the notebooks, you should sync your changes back to Github. This will create a backup of your work and allow you to see your work on the Github site. Most importantly, this will be the method for turning in your lab work each week. Each week during Session A will have a programming lab assignment contained in one or more notebooks in that week's folder. To complete the lab you will go through the notebook(s), execute the code, and add any additional code required. Once you are done with the lab, you will:
 
 1. save the notebook(s)
 2. sync the changes with your Github account
@@ -215,7 +217,7 @@ Let's test this workflow by syncing the changes we just made to the week-1 noteb
 
 Whenever you make changes to any file within the repository folder, Github will register the change, and will track it in the Github Desktop program. To see the changes, make sure you have the correct repository selected in the left pane, and that the `Changes` button is selected on the top bar. If there are any changes in the repository this button will have a circle next to it.
 
-Now, any files with changes since the last commit will be listed in the left pane. You can review these changes by clicking on each file name, which will display the changes on the right. If it is a text-based file (as the notebooks are), it will show you which lines were deleted (in red) and added (in green) since the last commmit. To commit these changes to the repository, type in a short description of the changes you made, and hit the checkmark next to 'Commit to master'. To sync this commit to the online repository, hit the 'Sync' button in the top right corner. Anytime you want to make changes, make sure you both submit a commit **AND** sync to the server, or else no one else will be able to see your local changes.
+Any files with changes since the last commit will now be listed in the left pane. You can review these changes by clicking on each file name, which will display the changes on the right. If it is a text-based file (as the notebooks are), it will show you which lines were deleted (in red) and added (in green) since the last commit. To commit these changes to the repository, type in a short description of the changes you made, and hit the checkmark next to `Commit to master`. To sync this commit to the online repository, hit the 'Sync' button in the top right corner. Any time you want to make changes, make sure you both submit a commit **AND** sync to the server, or else no one else will be able to see your local changes.
 
 -
 
@@ -247,7 +249,7 @@ After the pull request has been made, you will be notified by email about the st
 
 The lab assignments may be edited and developed during the course of the semester. Therefore, it is very important that before you begin any assignment you first pull in any changes from the main project into your fork. Unfortunately this is not possible through the Github Desktop interface, but can be easily done with a few lines in the Git Shell, which allows you to enter git commands directly. 
 
-First, make sure there are not any uncommited changes in your repo (the left pane says 'No changes'). Next, open the Git Shell by clicking the setup icon in the top right corner, and select `Open in Git Shell`.
+First, make sure there are not any uncommitted changes in your repo (the left pane should say 'No changes'). Next, open the Git Shell by clicking the setup icon in the top right corner, and select `Open in Git Shell`.
 
 -
 
@@ -259,15 +261,15 @@ Now, type in the following commands to set the remote master repository, and pul
 
     git remote add upstream https://github.com/dmc-2016/dmc.git
 
-This commands assigns the original repo to a remote called "upstream"
+↑ This commands assigns the original repo to a remote called "upstream"
 
     git fetch upstream
 
-This commands pulls in changes from the original repo not present in your local repository, without modifying your files.
+↑ This commands pulls in changes from the original repo not present in your local repository, without modifying your files.
 
     git merge upstream/master
 
-This commands merges fetched changes into your working files.
+↑ This commands merges fetched changes into your working files.
 
 -
 
