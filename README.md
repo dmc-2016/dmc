@@ -191,17 +191,19 @@ When you are done working on the VM, go back to the Command Prompt or Terminal w
 2. Ctrl+D to exit out of SSH remote access
 3. execute the command `vagrant halt` to shut down the VM. This will shut down the machine, but keep all the files so you can work on them at a later time.
 
-Now, the next time you want to work on the VM, just follow the launching instructions again, starting with the command
+Now, the next time you want to work on the VM, just follow the launching instructions again, using the commands:
 
     vagrant up
+    vagrant ssh
+    bash /vagrant/notebooks/launch.sh
 
 If you wish to completely erase your VM and start from scratch, you can also use the command
 
     vagrant destroy
 
-which will completely erase the VM and all of it's files. This might be necessary if something goes wrong with the installation or you have problems importing any of the libraries. Although this will erase all local files stored on the VM, your notebooks and any changes you made should remain since that folder is synced to your local machine.
+This will completely erase the VM and all of its files. This might be necessary if something goes wrong with the installation or you have problems importing any of the libraries. Although this will erase all local files stored on the VM, your notebooks and any changes you made should remain since that folder is synced to your local machine.
 
-### Syncing your work and submitting assignments through Github
+# Syncing your work and submitting assignments through Github
 
 Once you are done working with the notebooks, you can sync your changes back to Github. This will create a backup of your works and allow you to see your work on the Github site. Most importantly, this will be the method for turning in your lab work each week. In general, each week during Session A will have a programming lab assignment contained in one or more notebooks in the appropriate folder. To complete the lab you should go through the notebook(s), execute the code, and add any additional code requested. Once you are done with the lab, you will 
 
