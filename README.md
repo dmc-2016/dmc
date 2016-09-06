@@ -9,10 +9,10 @@ What's in the box:
 * [Scikit-learn]() - a basic library for many ML algorithms beyond NN.
 * [Jupyter](http://jupyter.readthedocs.org/en/latest/index.html) - web application to create, share documents that contain live code, equations, visualizations and explanatory text.
 
-![Keras](http://imgur.com/nE0of8d.jpg "Keras")  
-![Theano](http://i.imgur.com/Bb5SHxW.png "Theano")  
-![TensorFlow](http://imgur.com/rwISEz5.jpg "TensorFlow")  
-![Jupyter](http://i.imgur.com/zpzIAml.jpg "Jupyter")  
+![Keras](http://imgur.com/nE0of8d.jpg "Keras")
+![Theano](http://i.imgur.com/Bb5SHxW.png "Theano")
+![TensorFlow](http://imgur.com/rwISEz5.jpg "TensorFlow")
+![Jupyter](http://i.imgur.com/zpzIAml.jpg "Jupyter")
 ![Scikit-learn](http://i.imgur.com/EmaCyZO.png "Scikit-learn")
 
 # What is this for?
