@@ -45,7 +45,7 @@ At the top of the page under "VirtualBox platform packages" download the install
 
 Select your operating system to download the installation file, then go through the installation process.
 
-If you are using windows, you also need to install git:
+If you are using Windows, you also need to install git:
 
 * [git](https://git-scm.com/download/win)
 
