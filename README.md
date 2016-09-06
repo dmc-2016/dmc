@@ -13,7 +13,7 @@ What's in the box:
 ![Theano](http://i.imgur.com/Bb5SHxW.png "Theano")
 ![TensorFlow](http://imgur.com/rwISEz5.jpg "TensorFlow")
 ![Jupyter](http://i.imgur.com/zpzIAml.jpg "Jupyter")
-![Scikit-learn](http://imgur.com/SU5Oht8 "Scikit-learn")
+![Scikit-learn](http://i.imgur.com/SU5Oht8.png "Scikit-learn")
 
 # What is this for?
 
