@@ -147,29 +147,57 @@ which will completely erase the VM and all of it's files. This might be necessar
 
 ### Syncing your work and submitting assignments through Github
 
+Once you are done working with the notebooks, you can sync your changes back to Github. This will create a backup of your works and allow you to see your work on the Github site. Most importantly, this will be the method for turning in your lab work each week. In general, each week during Session A will have a programming lab assignment contained in one or more notebooks in the appropriate folder. To complete the lab you should go through the notebook(s), execute the code, and add any additional code requested. Once you are done with the lab, you will 
 
+1. save the notebook
+2. sync the changes to your Github account
+3. submit a pull request back to the main repository (dmc-2016/dmc), asking to merge all code. This pull request will serve as you 'handing in' the assignment, which will allow me to track everyone's work. Once I receive the pull request I will review your code, and possibly make comments and ask for revisions within the pull request comments section.
 
-1. Each week, fork the repository for that week into your own account. You can fork all the repositories at once, or do it before starting each week's labs. Be aware that there might be changes made to later weeks, so make sure to sync all changes from the main project before starting the lab.
-2. Clone your fork of the repository onto your local desktop.
-3. Work on the code locally as you complete the labs. Feel free to make commits to your fork as you work to keep track of your changes as you see fit. I recommend coming up with your own committing system to keep track of major changes, but this will not effect your completion of the assigment. Keep in mind that in some weeks, branches will be used to develop different version of the code for different steps of the tutorial. Make sure you switch to the right branch before starting the relevant tutorial.
-4. Once you have finished the week's lab, submit a pull request back to the main project (data-mining-the-city), asking to merge all code. I will then review your code, and possibly make comments and ask for revisions within the pull request comments section.
+Let's test this workflow by syncing the changes we made to the week-1 notebook, and submit a pull request.
 
-Go to the repo's directory and find the README.md file in the main folder. Open the file in any text editor (I recommend downloading [Sublime](http://www.sublimetext.com/), which is a great free text editor with many useful features such as syntax highlighting). Make some change to the file and save it. 
+Whenever you make changes to any file within the repository folder, Github will register the change, and will track it in the Github Desktop program. You can review the changes made to each file by clicking them on the left pane. It will then show you which lines were deleted (in red) and added (in green) since the last commmit. To commit these changes to the repository, type in a short description of the changes you made, and hit the checkmark next to 'Commit to master'. To sync this commit to the online repository, hit the 'Sync' button in the top right corner. Anytime you want to make changes, make sure you both submit a commit **AND** sync to the server, or else no one else will be able to see your local changes.
 
-![GitHub account](/dmc/images/github06.png)
-
-As soon as you hit save, Github will register the change, and will track it in the Github client. You can review the changes made to each file by clicking them on the left pane. It will then show you which lines were deleted (in red) and added (in green) since the last commmit. To commit these changes to the repository, type in a short description of the changes you made, and hit the checkmark next to 'Commit to master'. To sync this commit to the online repository, hit the 'Sync' button in the top right corner. Anytime you want to make changes, make sure you both submit a commit **AND** sync to the server, or else no one else will be able to see your local changes.
-
-![GitHub account](/dmc/images/github07.png)
+![GitHub account](/dmc/images/github08.png)
 
 Once the changes are synced, you can go back to the Github website and see that the changes are now reflected in your fork, with the commit description written next to the changed file. 
 
-![GitHub account](/dmc/images/github08.png)
+![GitHub account](/dmc/images/github09.png)
 
 After you've made all the changes you want, you are now ready to submit your edits as a pull request to the master project. To start, click the text that says 'Pull request' (see image above). This will present you with an interface that lets you specify the source and target of the pull, as well as review the changes that have been made. On the top bar, the base fork should be the base project (`data-mining-the-city/getting-started`) and the head fork should be your fork (`<user>/getting-started`). In this case, since the changes are minor and are not in conflict with any changes made in the main project, it is able to merge the changes directly without any additional negotiations. 
 
 Once you are satisfied, hit the green 'Create pull request' button to submit the request. You will have to write a short message describing all the changes you have made since forking the project. Make sure to write down any information the main project owners might need to know while considering your request. This will be the same method you use to turn in your lab work each week, so make sure to also include any feedback, as well as describe any issues or difficulties you had.
 
-![GitHub account](/dmc/images/github09.png)
+![GitHub account](/dmc/images/github10.png)
 
 After the pull request has been made, you will be notified by email about the status of the request, as well as any comments that are made in the comments section. I will use the pull requests to track and grade the assignments, and will use the comments section to leave you feedback and request any changes.
+
+### Pulling in changes from the main repository
+
+I will continue to develop the lab assignments throughout the course of the semester, and might make changes depending on the pace of the class. Therefore, it is very important that before you start on any assignment you pull in any changes from the main project into your fork. Unfortunately this is not possible through the Github Desktop GUI, but can be easily done with a few lines in the Git Shell, which allows you to enter git commands directly. 
+
+First, make sure there are not any uncommited changes in your repo (the left pane says 'No changes'). Next, open the Git Shell by clicking the setup icon in the top right corner, and select `Open in Git Shell`.
+
+![GitHub account](/dmc/images/github06.png)
+
+Now, type in the following commands to set the remote master repository, and pull in changes to your local fork:
+
+    git remote add upstream https://github.com/dmc-2016/dmc.git
+
+This commands assigns the original repo to a remote called "upstream"
+
+    git fetch upstream
+
+This commands pulls in changes from the original repo not present in your local repository, without modifying your files.
+
+    git merge upstream/master
+
+This commands merges fetched changes into your working files.
+
+![GitHub account](/dmc/images/github06.png)
+
+It should only be necessary to set the remote repository the first time. Next time you want to pull in changes from the master repository you can just open the Git Shell and type in 
+
+    git fetch upstream
+    git merge upstream/master
+
+Make sure to do this before starting any assignment, and good luck!
