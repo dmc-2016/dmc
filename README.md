@@ -149,7 +149,7 @@ This will use SSH to give you remote access into your VM, so that all the comman
 
     bash /vagrant/notebooks/launch.sh
 
-![setup](images/setup07.png)
+![setup](images/setup08.png)
 
 This will run a script that will launch the Jupyter server and forward it to your local computer. It will also share the 'notebooks' folder between the VM and your local machine, so that you can work with files directly on your local system. To see the notebooks, open a browser on your local machine, and browse to [http://127.0.0.1:8888](http://127.0.0.1:8888) or [localhost:8888](localhost:8888).
 
