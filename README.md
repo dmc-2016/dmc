@@ -1,19 +1,15 @@
 # DMC 2016 Virtual Machine
 
-This Vagrant setup automates the installation of a full Machine Learning software stack running on Ubuntu 14.04.
+This process automates the installation of a full Machine Learning software stack running on Linux Ubuntu 14.04.
 
-What's in the box:
+![stack](images/stack.png)
+
+What's included:
 * [Keras](http://keras.io/) - minimalist, highly modular neural networks (NN) library.
 * [Theano](http://deeplearning.net/software/theano/) - library to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
 * [Tensorflow](https://www.tensorflow.org/versions/r0.7/api_docs/index.html) - library for numerical computation using data flow graphs.
 * [Scikit-learn](http://scikit-learn.org/) - a basic library for many ML algorithms beyond NN.
 * [Jupyter](http://jupyter.readthedocs.org/en/latest/index.html) - web application to create, share documents that contain live code, equations, visualizations and explanatory text.
-
-![Keras](http://imgur.com/nE0of8d.jpg "Keras")
-![Theano](http://i.imgur.com/Bb5SHxW.png "Theano")
-![TensorFlow](http://imgur.com/rwISEz5.jpg "TensorFlow")
-![Jupyter](http://i.imgur.com/zpzIAml.jpg "Jupyter")
-![Scikit-learn](http://i.imgur.com/EmaCyZO.png "Scikit-learn")
 
 # What is this for?
 
