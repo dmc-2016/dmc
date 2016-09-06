@@ -87,9 +87,13 @@ When you are logged in, fork this repository to create your own copy on your acc
 
 ![GitHub account](images/github02.png)
 
+-
+
 You should now see this repository under your account, as a fork of the main repository from dmc-2016.
 
 ![GitHub account](images/github03.png)
+
+-
 
 Now, let's download and install the Github client, so you can clone the repository to your local computer and access the files locally. Go here: [https://desktop.github.com/](https://desktop.github.com/) to download the client and follow the instructions to install it. I will use the windows version, but it works in a similar way for both Mac and Linux.
 
@@ -97,9 +101,11 @@ Once you have the client installed, you should see a blank interface. Click the 
 
 ![GitHub account](images/github04.png)
 
+-
+
 Once the process is complete, you will see a local copy of all the files from the repository in the specified folder and a blank interface telling you that you have not made any local changes. 
 
-![GitHub account](images/github04.png)
+![GitHub account](images/github05.png)
 
 ### Setting up the VM
 
@@ -163,15 +169,21 @@ Whenever you make changes to any file within the repository folder, Github will 
 
 ![GitHub account](images/github08.png)
 
+-
+
 Once the changes are synced, you can go back to the Github website and see that the changes are now reflected in your fork, with the commit description written next to the changed file. 
 
 ![GitHub account](images/github09.png)
+
+-
 
 After you've made all the changes you want, you are now ready to submit your edits as a pull request to the master project. To start, click the text that says 'Pull request' (see image above). This will present you with an interface that lets you specify the source and target of the pull, as well as review the changes that have been made. On the top bar, the base fork should be the base project (`data-mining-the-city/getting-started`) and the head fork should be your fork (`<user>/getting-started`). In this case, since the changes are minor and are not in conflict with any changes made in the main project, it is able to merge the changes directly without any additional negotiations. 
 
 Once you are satisfied, hit the green 'Create pull request' button to submit the request. You will have to write a short message describing all the changes you have made since forking the project. Make sure to write down any information the main project owners might need to know while considering your request. This will be the same method you use to turn in your lab work each week, so make sure to also include any feedback, as well as describe any issues or difficulties you had.
 
 ![GitHub account](images/github10.png)
+
+-
 
 After the pull request has been made, you will be notified by email about the status of the request, as well as any comments that are made in the comments section. I will use the pull requests to track and grade the assignments, and will use the comments section to leave you feedback and request any changes.
 
@@ -198,6 +210,8 @@ This commands pulls in changes from the original repo not present in your local 
 This commands merges fetched changes into your working files.
 
 ![GitHub account](images/github07.png)
+
+-
 
 It should only be necessary to set the remote repository the first time. Next time you want to pull in changes from the master repository you can just open the Git Shell and type in 
 
