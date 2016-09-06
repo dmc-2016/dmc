@@ -56,6 +56,6 @@ echo "installing tensorflow"
 conda install -c conda-forge -y tensorflow >/dev/null 2>&1
 
 # Miscellaneous
-install 'hdf5' libhdf5-7
+# install 'hdf5' libhdf5-7
 
 echo 'All set!'
