@@ -193,6 +193,12 @@ When you are done working on the VM, go back to the Command Prompt or Terminal w
 2. Ctrl+D to exit out of SSH remote access
 3. type in the command `vagrant halt` to shut down the VM. This will shut down the machine, but keep all the files so you can work on them at a later time.
 
+-
+
+![setup](images/setup02.png)
+
+-
+
 Now, the next time you want to work on the VM, just follow the launching instructions again, using the commands:
 
     vagrant up
