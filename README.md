@@ -33,9 +33,9 @@ For these reasons, you may eventually consider a native solution working directl
 
 With that out of the way, let's begin...
 
-# Installation
+# Installation requirements
 
-You must install VirtubalBox and Vagrant before continuing:
+You must install VirtualBox and Vagrant before continuing:
 
 * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
@@ -51,7 +51,7 @@ If you are using windows, you also need to install git:
 
 and then add the path to your installation (for example, "C:\Program Files\Git\usr\bin") into your system's %PATH% variable. If you don't know how to do this, you can look at [these instructions](http://www.computerhope.com/issues/ch000549.htm). This will allow us to remotely access the VM using git's SSH client. If you are using OSX, an SSH client is already included.
 
-### Getting started with Github
+# Working with Github
 
 All of the work you will do for this class, including downloading the setup files for your VM as well as completing and handing in lab assignments will be done through this Github repository. 
 
@@ -101,7 +101,7 @@ You should now see this repository under your account, as a fork of the main rep
 
 Now, let's download and install the Github client, so you can clone the repository to your local computer and access the files locally. Go here: [https://desktop.github.com/](https://desktop.github.com/) to download the client and follow the instructions to install it. I will use the windows version, but it works in a similar way for both Mac and Linux.
 
-Once you have the client installed, you should see a blank interface. Click the plus sign in the upper left corner, and go to Clone. This should produce a list of any projects you have started or forked. CLick on your fork of 'dmc', and click the check mark to clone this repository to your local computer. It will ask you where you want to clone the repository into. Select a folder such as 'My Documents/GitHub'. 
+Once you have the client installed, you should see a blank interface. Click the plus sign in the upper left corner, and go to Clone. This should produce a list of any projects you have started or forked. CLick on your fork of 'dmc', and click the check mark to clone this repository to your local computer. It will ask you where you want to clone the repository into. Select a folder such as 'Documents/GitHub'. 
 
 -
 
@@ -111,9 +111,13 @@ Once you have the client installed, you should see a blank interface. Click the 
 
 Once the process is complete, you will see a local copy of all the files from the repository in the specified folder and a blank interface telling you that you have not made any local changes. 
 
+-
+
 ![GitHub account](images/github05.png)
 
-### Setting up the VM
+-
+
+# Setting up the VM
 
 Once you have a local copy of the dmc repository cloned to your computer, we will do the rest of the setup directly in code using the command line. 
 
