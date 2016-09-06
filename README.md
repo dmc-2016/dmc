@@ -137,19 +137,19 @@ This will go through the initialization procedure and start up the VM. If this i
 
 Once the setup is done you should have a new VM set up through VirtualBox which is provisioned with all the software we will use in class. To check that the VM was installed, you can open up the VirtualBox software. You should see your VM there with the status `Running`
 
-![setup](images/setup02.png)
+![setup](images/setup05.png)
 
 Now go back to your command line and type in:
 
     vagrant ssh
 
-![setup](images/setup03.png)
+![setup](images/setup06.png)
 
 This will use SSH to give you remote access into your VM, so that all the commands you type will be executed on the new Linux machine. You can now work on this machine through the command line, but this might be difficult if you've never worked with a computer this way. Luckily, most of our work will be done through the Jupyter interactive coding interface which has a much friendlier user interface. All we have to do to launch the Jupyter interface is to execute the following command in the same command line window:
 
     bash /vagrant/notebooks/launch.sh
 
-![setup](images/setup04.png)
+![setup](images/setup07.png)
 
 This will run a script that will launch the Jupyter server and forward it to your local computer. It will also share the 'notebooks' folder between the VM and your local machine, so that you can work with files directly on your local system. To see the notebooks, open a browser on your local machine, and browse to [http://127.0.0.1:8888](http://127.0.0.1:8888) or [localhost:8888](localhost:8888).
 
