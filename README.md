@@ -18,8 +18,11 @@ What's in the box:
 You must install VirtubalBox and Vagrant before continuing:
 
 * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+
 At the top of the page under "VirtualBox platform packages" download the installation file according to your operating system (Windows or OSX) and go through the installation process.
+
 * [Vagrant](https://www.vagrantup.com/downloads.html)
+
 Select your operating system to download the installation file, then go through the installation process.
 
 # Getting started
