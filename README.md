@@ -82,6 +82,7 @@ First, go to https://github.com/ and sign up for a free account:
 ![GitHub account](images/github01.png)
 
  
+ 
 When you are logged in, fork this repository to create your own copy on your account. At the top right corner of this page, click the button that says 'Fork'.
 
 ![GitHub account](images/github02.png)
