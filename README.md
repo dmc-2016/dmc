@@ -269,8 +269,8 @@ Next, **if you are using Windows**, open the Git Shell by clicking the setup ico
 
 -
 
-![GitHub account](images/github08.png)
-![GitHub account](images/github09.png)
+![GitHub account](images/github11.png)
+<!--![GitHub account](images/github09.png)-->
 
 -
 
