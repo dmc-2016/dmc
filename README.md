@@ -255,11 +255,22 @@ After the pull request has been made, you will be notified by email about the st
 
 The lab assignments may be edited and developed during the course of the semester. Therefore, it is very important that before you begin any assignment you first pull in any changes from the main project into your fork. Unfortunately this is not possible through the Github Desktop interface, but can be easily done with a few lines in the Git Shell, which allows you to enter git commands directly. 
 
-First, make sure there are not any uncommitted changes in your repo (the left pane should say 'No changes'). Next, open the Git Shell by clicking the setup icon in the top right corner, and select `Open in Git Shell`.
+First, make sure there are not any uncommitted changes in your repo (the left pane should say 'No changes'). 
+
+Next, **if you are using Windows**, open the Git Shell by clicking the setup icon in the top right corner, and select `Open in Git Shell`.
 
 -
 
 ![GitHub account](images/github06.png)
+
+-
+
+**If you are using MacOSX**, open the Terminal by right-clicking on the repository's name in the left pane and selecting `Open in Terminal`.
+
+-
+
+![GitHub account](images/github11.png)
+<!--![GitHub account](images/github09.png)-->
 
 -
 
