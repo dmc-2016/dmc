@@ -1,5 +1,9 @@
 .vagrant
 .ipynb_checkpoints
 -*
+<<<<<<< HEAD
+*~
+=======
 *~
 *.pyc
+>>>>>>> upstream/master
