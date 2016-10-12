@@ -1,3 +1,7 @@
 .vagrant
 .ipynb_checkpoints
+-*
 *~
+*.pyc
+checkpoint
+*.ckpt*
