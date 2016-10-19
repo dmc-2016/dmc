@@ -3,5 +3,6 @@
 -*
 *~
 *.pyc
+.DS_Store
 checkpoint
 *.ckpt*
