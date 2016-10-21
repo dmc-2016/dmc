@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+.vagrant
+.ipynb_checkpoints
+-*
+*~
+*.pyc
+=======
 .vagrant
 .ipynb_checkpoints
 -*
@@ -5,3 +12,4 @@
 *.pyc
 checkpoint
 *.ckpt*
+>>>>>>> upstream/master
