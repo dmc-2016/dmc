@@ -3,6 +3,7 @@
 -*
 *~
 *.pyc
+<<<<<<< HEAD
 *.ipynb
 
 *.ipynb
@@ -16,3 +17,8 @@ notebooks/week-2/04 - Lab 2 Assignment.ipynb
 notebooks/week-2/04 - Lab 2 Assignment.ipynb
 
 notebooks/week-2/04 - Lab 2 Assignment.ipynb
+=======
+checkpoint
+*.ckpt*
+>>>>>>> upstream/master
+.DS_Store
