@@ -57,4 +57,4 @@ def makeImage(dow, tod):
 
 
 for i in range(24):
-    makeImage(1,i)
+    makeImage(0,i)
