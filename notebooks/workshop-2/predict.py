@@ -76,7 +76,7 @@ print("Making predictions...")
 dir = os.path.expanduser("~\\Documents")
 
 sshProcess = subprocess.Popen(["ssh", "-p", "2222", "vagrant@127.0.0.1", "-i", dir + "\\GitHub\\dmc\\.vagrant\\machines\\default\\virtualbox\\private_key"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
-sshProcess.stdin.write("cd notebooks/workshop-2\n")
+sshProcess.stdin.write("cd 'notebooks/workshop-2'\n")
 sshProcess.stdin.write("/home/vagrant/anaconda2/bin/python 03-use_model.py\n")
 sshProcess.stdin.close()
 
@@ -86,6 +86,9 @@ for line in sshProcess.stdout:
     s = line.split("python: ")
     if len(s) > 1:
         output.append(s[1].strip())
+    
+for line in sshProcess.stderr:
+    print line
 
 folder = '-temp'
 for the_file in os.listdir(folder):

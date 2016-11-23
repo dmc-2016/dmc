@@ -37,12 +37,6 @@ data = []
 
 fileNames = os.listdir(imageFolder)
 
-# print "number of images:", len(fileNames)
-
-# typesList = list(set([fileName.split("_")[0] for fileName in fileNames]))
-# typesDict = {}
-# for i, t in enumerate(typesList):
-#     typesDict[t] = i
     
 for fileName in fileNames:
 
@@ -88,8 +82,8 @@ else:
 # In[17]:
 
 # model hyperparameters
-batch_size = 32
-nb_epoch = 30
+# batch_size = 32
+# nb_epoch = 30
 
 # network architecture
 patch_size_1 = 3
@@ -100,10 +94,10 @@ depth_2 = 32
 
 pool_size = 2
 
-num_hidden_1 = 128
-num_hidden_2 = 128
+num_hidden_1 = 64
+num_hidden_2 = 64
 
-dropout = 0.5
+# dropout = 0.5
 
 
 # In[18]:
@@ -124,11 +118,11 @@ model.add(Flatten())
 
 model.add(Dense(num_hidden_1))
 model.add(Activation('relu'))
-model.add(Dropout(dropout))
+# model.add(Dropout(dropout))
 
 model.add(Dense(num_hidden_2))
 model.add(Activation('relu'))
-model.add(Dropout(dropout))
+# model.add(Dropout(dropout))
 
 model.add(Dense(num_classes))
 
