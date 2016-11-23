@@ -1,5 +1,6 @@
 .vagrant
 .ipynb_checkpoints
+.3dm.rhl
 -*
 *~
 *.pyc
