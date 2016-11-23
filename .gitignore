@@ -1,8 +1,9 @@
 .vagrant
 .ipynb_checkpoints
-.3dm.rhl
 -*
 *~
 *.pyc
 checkpoint
 *.ckpt*
+*.3dm.rhl
+*.3dmbak
