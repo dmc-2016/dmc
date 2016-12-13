@@ -5,3 +5,6 @@
 *.pyc
 checkpoint
 *.ckpt*
+*.3dm.rhl
+*.3dmbak
+notebooks/workshop-1/gis-base/nybb.shp.xml
