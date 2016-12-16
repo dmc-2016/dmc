@@ -193,6 +193,12 @@ When you are done working on the VM, go back to the Command Prompt or Terminal w
 2. Ctrl+D to exit out of SSH remote access
 3. type in the command `vagrant halt` to shut down the VM. This will shut down the machine, but keep all the files so you can work on them at a later time.
 
+-
+
+![setup](images/setup02.png)
+
+-
+
 Now, the next time you want to work on the VM, just follow the launching instructions again, using the commands:
 
     vagrant up
@@ -249,11 +255,22 @@ After the pull request has been made, you will be notified by email about the st
 
 The lab assignments may be edited and developed during the course of the semester. Therefore, it is very important that before you begin any assignment you first pull in any changes from the main project into your fork. Unfortunately this is not possible through the Github Desktop interface, but can be easily done with a few lines in the Git Shell, which allows you to enter git commands directly. 
 
-First, make sure there are not any uncommitted changes in your repo (the left pane should say 'No changes'). Next, open the Git Shell by clicking the setup icon in the top right corner, and select `Open in Git Shell`.
+First, make sure there are not any uncommitted changes in your repo (the left pane should say 'No changes'). 
+
+Next, **if you are using Windows**, open the Git Shell by clicking the setup icon in the top right corner, and select `Open in Git Shell`.
 
 -
 
 ![GitHub account](images/github06.png)
+
+-
+
+**If you are using MacOSX**, open the Terminal by right-clicking on the repository's name in the left pane and selecting `Open in Terminal`.
+
+-
+
+![GitHub account](images/github11.png)
+<!--![GitHub account](images/github09.png)-->
 
 -
 
