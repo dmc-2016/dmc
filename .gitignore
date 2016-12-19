@@ -20,5 +20,38 @@ notebooks/week-2/04 - Lab 2 Assignment.ipynb
 =======
 checkpoint
 *.ckpt*
+<<<<<<< HEAD
 >>>>>>> upstream/master
 .DS_Store
+=======
+*.3dm.rhl
+*.3dmbak
+>>>>>>> upstream/master
+
+*.gh
+
+*.3dm
+
+*.3dm
+
+notebooks/workshop-2/workshop-2.3dm
+
+notebooks/workshop-2/workshop-2.gh
+
+notebooks/workshop-2/03-use model.ipynb
+
+notebooks/workshop-2/02-train model.ipynb
+
+notebooks/workshop-2/03-use_model.py
+
+notebooks/workshop-2/01-prepare data.ipynb
+
+notebooks/week-6/02-using a pre-trained model with Keras.ipynb
+
+notebooks/week-6/03-model improvement.ipynb
+
+notebooks/week-6/02-using a pre-trained model with Keras.ipynb
+
+notebooks/week-6/03-model improvement.ipynb
+
+notebooks/week-6/02-using a pre-trained model with Keras.ipynb
